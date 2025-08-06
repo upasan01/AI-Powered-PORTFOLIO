@@ -11,9 +11,9 @@ import Contact from './pages/Contact';
 function App() {
   return (
     <Router>
-      <div className="min-h-screen flex flex-col font-inter">
+      <div className="font-inter bg-gray-900">
         <Navbar />
-        <main className="flex-grow container mx-auto px-4 py-8 md:px-8 lg:px-16">
+        <main>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />

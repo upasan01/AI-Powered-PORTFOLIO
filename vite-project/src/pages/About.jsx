@@ -1,28 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ReactTyped } from 'react-typed'; // Use named import
-import { Link } from 'react-router-dom'; // For CTA buttons
-
-// Icons from react-icons (as you have it installed)
-import { FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaGitAlt } from 'react-icons/fa';
-import { SiMongodb, SiExpress, SiTailwindcss, SiJavascript } from 'react-icons/si';
-
+import { ReactTyped } from 'react-typed';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Mail } from 'lucide-react';
 import profilePicture from '../assets/ProfilePicture.png';
+import { personalInfo } from '../config';
 
 function About() {
-  const skills = [
-    { icon: <FaHtml5 size={28} className="text-orange-500" />, name: 'HTML5' },
-    { icon: <FaCss3Alt size={28} className="text-blue-500" />, name: 'CSS3' },
-    { icon: <SiJavascript size={28} className="text-yellow-400" />, name: 'JavaScript' },
-    { icon: <FaReact size={28} className="text-cyan-400" />, name: 'React' },
-    { icon: <SiTailwindcss size={28} className="text-cyan-300" />, name: 'Tailwind CSS' },
-    { icon: <FaNodeJs size={28} className="text-green-500" />, name: 'Node.js' },
-    { icon: <SiExpress size={28} className="text-gray-400" />, name: 'Express.js' },
-    { icon: <SiMongodb size={28} className="text-green-600" />, name: 'MongoDB' },
-    { icon: <FaGitAlt size={28} className="text-orange-600" />, name: 'Git' },
-  ];
-
-  // Animation variants for framer-motion
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
@@ -30,9 +14,9 @@ function About() {
 
   return (
     <section className="py-20 px-4 md:px-8 bg-gray-900 text-gray-200">
-      <div className="max-w-6xl mx-auto">
+      <div className="container mx-auto">
         <motion.h2 
-          className="text-4xl lg:text-5xl font-bold text-center mb-12"
+          className="text-4xl lg:text-5xl font-bold text-center mb-16"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}
@@ -42,7 +26,6 @@ function About() {
         </motion.h2>
 
         <div className="flex flex-col md:flex-row items-center md:space-x-12">
-          {/* Animated Profile Picture */}
           <motion.div 
             className="md:w-1/3 mb-10 md:mb-0 flex justify-center"
             initial={{ opacity: 0, scale: 0.8 }}
@@ -50,14 +33,15 @@ function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <img
-              src={profilePicture} 
-              alt="My Profile"
-              className="rounded-full w-60 h-60 lg:w-72 lg:h-72 object-cover shadow-2xl border-4 border-blue-500 transition-transform duration-300 hover:scale-105"
-            />
+            <div className="p-1.5 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full">
+              <img
+                src={profilePicture} 
+                alt="My Profile"
+                className="rounded-full w-60 h-60 lg:w-72 lg:h-72 object-cover shadow-2xl"
+              />
+            </div>
           </motion.div>
           
-          {/* Animated About Me Text */}
           <motion.div 
             className="md:w-2/3 text-lg leading-relaxed"
             initial="hidden"
@@ -65,7 +49,7 @@ function About() {
             viewport={{ once: true, amount: 0.3 }}
             variants={fadeIn}
           >
-            <h3 className="text-3xl font-bold text-white mb-2">Hello! I'm Your Name</h3>
+            <h3 className="text-3xl font-bold text-white mb-2">Hello! I'm {personalInfo.name}</h3>
             <div className="text-xl font-light text-blue-300 mb-6 h-8">
               <ReactTyped
                 strings={[
@@ -88,7 +72,6 @@ function About() {
           </motion.div>
         </div>
 
-        {/* Animated Call to Action (CTA) */}
         <motion.div 
           className="text-center mt-20"
           initial="hidden"
@@ -99,15 +82,22 @@ function About() {
           <h3 className="text-2xl font-bold text-white mb-4">Let's Build Something Amazing</h3>
           <p className="text-gray-400 mb-8">Have a project in mind or just want to connect? Feel free to reach out.</p>
           <div className="flex justify-center space-x-4">
-            <Link to="/projects" className="bg-blue-600 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 hover:bg-blue-500 shadow-lg hover:shadow-blue-500/50">
-              View My Work
+            <Link
+              to="/projects"
+              className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center group"
+            >
+              View My Projects
+              <ArrowRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
             </Link>
-            <Link to="/contact" className="bg-gray-700 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 hover:bg-gray-600 shadow-lg">
+            <Link
+              to="/contact"
+              className="bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center group"
+            >
               Get in Touch
+              <Mail size={20} className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
             </Link>
           </div>
         </motion.div>
-
       </div>
     </section>
   );

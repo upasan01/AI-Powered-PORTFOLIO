@@ -1,5 +1,3 @@
-// src/components/Projects.js
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaGithub } from 'react-icons/fa';
@@ -27,6 +25,8 @@ function Projects() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
+              // Add this line for the hover effect 👇
+              whileHover={{ scale: 1.05, y: -5, boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.3)" }}
             >
               <img 
                 src={project.imageUrl} 
