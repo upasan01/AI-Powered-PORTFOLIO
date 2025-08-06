@@ -16,7 +16,7 @@ function Footer() {
             <Mail size={28} />
           </a>
         </div>
-        <p>&copy; {new Date().getFullYear()} Your Name. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Sk Samim Ali. All rights reserved.</p>
         <p className="text-sm mt-2">Built with React and Tailwind CSS</p>
       </div>
     </footer>

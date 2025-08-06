@@ -14,7 +14,6 @@ function Home() {
     const options = {
       strings: [
         "A Full Stack Developer",
-        "Passionate about creating amazing web experiences",
         "Specializing in MERN Stack"
       ],
       typeSpeed: 50,

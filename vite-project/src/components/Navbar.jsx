@@ -13,7 +13,7 @@ function Navbar() {
     <nav className="bg-gray-800 p-4 shadow-lg sticky top-0 z-50">
       <div className="container mx-auto flex justify-between items-center">
         <Link to="/" className="text-white text-2xl font-bold hover:text-blue-400 transition-colors duration-300">
-          Samim.dev
+          Sk.dev
         </Link>
         <div className="md:hidden">
           <button onClick={toggleMenu} className="text-white focus:outline-none">
