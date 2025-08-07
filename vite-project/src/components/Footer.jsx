@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { Github, Linkedin, } from 'lucide-react';
 import { socialLinks } from '../config'; // Import social links
 
 function Footer() {
@@ -12,9 +12,6 @@ function Footer() {
           </a>
           <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-400 transition-all duration-300 transform hover:scale-110">
             <Linkedin size={28} />
-          </a>
-          <a href={socialLinks.email} className="text-gray-400 hover:text-blue-400 transition-all duration-300 transform hover:scale-110">
-            <Mail size={28} />
           </a>
         </div>
         <p>&copy; {new Date().getFullYear()} Sk Samim Ali. All rights reserved.</p>
