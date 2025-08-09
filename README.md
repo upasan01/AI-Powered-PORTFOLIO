@@ -2,7 +2,7 @@
 
 This is the official repository for my personal developer portfolio, a modern, interactive, and responsive single-page application designed to showcase my skills, projects, and experience. The standout feature is a personalized AI assistant that can answer visitor questions in real-time.
 
-**Live Demo URL:**(https://meetsamim.netlify.app/projects)
+**Live Demo URL:**[(https://meetsamim.netlify.app/projects)]
 
 ---
 
@@ -109,4 +109,4 @@ Netlify will automatically build and deploy your site and serverless function wh
 
 Sk Samim Ali – samimalisk000@gmail.com
 
-Project Link: [https://github.com/your-username/your-repository-name](https://github.com/your-username/your-repository-name)
+Project Link: [(https://github.com/samim29/AI-Powered-PORTFOLIO/tree/main)]
