@@ -4,7 +4,7 @@ export const projects = [
     name: 'Wander Lust – Full-Stack Travel Stay Platform',
     description: 'Full-stack travel booking app with listing ownership, Unsplash integration, and dynamic checkout.',
     imageUrl: 'https://github.com/samim29/portfolio-assets/blob/main/projectImages/WandurLust.png?raw=true', 
-    liveUrl: '',
+    liveUrl: 'https://wanderlast-5vfq.onrender.com',
     repoUrl: 'https://github.com/samim29/wanderLust',
   },
   {
